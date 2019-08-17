@@ -1,0 +1,17 @@
+<main role="main" class="container">
+  <h1> Todo Lists </h1>
+  <div class="starter-template">
+    <div class="row">
+    	<% @todo_lists.each do |ls| %>
+    	    <div class="card card-todo-list col-xs-6" style="">
+    		  <div class="card-body">
+    		    <h5 class="card-title"><%= ls.list_name %></h5>
+    		    <p class="card-text"><%= ls.list_due_date %> <small><%= link_to 'Show', to_do_list_path(ls) %> </small> </p>
+    		    
+    		  </div>
+    		</div>
+    	<% end %>
+    </div>
+  </div>
+</main><!-- /.container -->
+

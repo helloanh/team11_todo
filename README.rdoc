@@ -1,0 +1,9 @@
+== README
+
+(base) ➜  advanced_ar git:(assignment7) ✗ ruby -v
+ruby 2.5.0p0 (2017-12-25 revision 61468) [x86_64-darwin18]
+(base) ➜  advanced_ar git:(assignment7) ✗ rails -v
+Rails 4.2.0
+(base) ➜  advanced_ar git:(assignment7) ✗ bundle -v
+Bundler version 1.17.3
+(base) ➜  advanced_ar git:(assignment7) ✗

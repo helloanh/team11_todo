@@ -1,0 +1,36 @@
+<main role="main" class="container">
+  <h1>Todo Items</h1>
+
+  <button type="button" class="btn btn-primary"><%= link_to "Create New Todo Item", new_to_do_list_to_do_item_path %></button>
+
+  <div class="starter-template">
+    <div class="row">
+    	<% @to_do_items.each do |ls| %>
+    	    <div class="card card-todo-list col-xs-6" style="">
+    		  <div class="card-body">
+    		    <h5 class="card-title"><%= ls.task_title %></h5>
+    		    <p class="card-text"> <%= ls.due_date %> <small><%= link_to 'Show',  to_do_list_to_do_item_path(ls) %> </small> </p>
+    		    
+    		  </div>
+    		</div>
+    	<% end %>
+    </div>
+    <%= will_paginate @to_do_item %>
+  </div>
+</main><!-- /.container -->
+
+
+
+
+<!-- 
+If todo_list1.to_do_items.size == 0
+  then color red for the ToDoItem index.html and show.html view 
+
+If todo_list1.to_do_items.size != 0
+  check todo_list1.to_do_items.status == false  
+    color still is red
+  else 
+    color is greend
+end
+
+-->

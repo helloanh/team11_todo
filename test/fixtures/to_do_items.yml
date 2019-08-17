@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  task_title: MyString
+  due_date: 2019-07-30
+  to_do_list_id: 
+
+two:
+  task_title: MyString
+  due_date: 2019-07-30
+  to_do_list_id: 

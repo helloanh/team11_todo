@@ -1,0 +1,11 @@
+<h1>Create a New Todo List</h1>
+<%= form_for @todo_list do |f| %>
+
+  <%= label_tag(:list_name, "List Name:") %>
+  <%= f.text_field :title %></br>
+
+  <%= label_tag(:list_due_date, "List due date") %> 
+  <%= f.date_field :list_due_Date, as: :date, value: f.object.try(:strftime,"%m/%d/%Y"), class: 'form-control' %></br>
+  <%= f.submit "Create Todo List" %>
+
+<% end %>

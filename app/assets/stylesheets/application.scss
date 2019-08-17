@@ -1,0 +1,96 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.git 
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "bootstrap";
+@import "bootstrap-sprockets";
+
+
+$pop-purple: #3626A7;
+$blue-dark: #13262F;
+$linen-white: #FFFFF2;
+$robin-light-blue: #91C5B9;
+$fade-grey: #DAE1E5;
+
+h2, h3, h4 {
+	color: $pop-purple;
+}
+
+a {
+	color: $robin-light-blue;
+}
+
+a:hover {
+	color: $pop-purple;
+}
+
+.navbar {
+	border-radius: 0px;
+	&.navbar-dark {
+		&.bg-dark {
+			background-color: $blue-dark;
+			padding: 2rem 0 0 3rem;
+		}	
+	}
+	a {
+		color: $linen-white;
+		padding: 0rem 1rem;
+
+	}
+}
+li { 
+	list-style: none;
+}
+
+.txt-highlight {
+	color: $blue-dark;
+}
+
+.txt-light {
+	color: $robin-light-blue;
+}
+
+.card {
+	&.card-todo-list {
+		background-color: $fade-grey;
+		padding: 1rem;
+    	margin-bottom: 1rem;
+    	margin-right: 1rem;
+	}
+
+}
+
+input {	
+	#button {
+	    color: $linen-white;
+	    background: $pop-purple;
+	}	
+}
+
+input[type="submit"] {
+	color: $linen-white;
+	background: $robin-light-blue;	
+}
+
+
+.btn-primary {
+	margin: 2rem 2rem 2.5rem 0.75rem;
+    color: $linen-white;
+    background-color: $robin-light-blue;
+    border-color: $robin-light-blue;
+    a {
+    	color: $linen-white;
+    }
+}
+

@@ -1,0 +1,43 @@
+<div class="container" xmlns:background-color="http://www.w3.org/1999/xhtml">
+	<h1><%= @to_do_list['list_name']%></h1>
+	<h3>List Due Date: <%= @to_do_list['list_due_date']%></h3>
+	<button class="btn btn-primary"><%=link_to "Add a New ToDo Item", new_to_do_list_to_do_item_path(@to_do_list) %> </button>
+	<ul class="list-group">
+	<% @to_do_items.each do | i| %>
+		<li class="list-group-item">
+			<%if(i.done==false)%>
+				<button style="background-color: #D10C26; color: #FFFFF2;"><%= i.due_date %></button>
+				<span class="txt-highlight">
+					
+					<a style="color: #13262F;" href="/to_do_lists/<%= @to_do_list['id']%>/to_do_items/<%= i.id %>"/> <%= i.task_title %></a>
+					
+				</span>
+			<%end%>
+
+			<%if(i.done==true)%>
+				<button style="background-color: #227F31; color: #FFFFF2;"><%= i.due_date %></button>
+				<span class="txt-highlight">
+					
+					<a style="color: #13262F;" href="/to_do_lists/<%= @to_do_list['id']%>/to_do_items/<%= i.id %>"/> <%= i.task_title %></a>
+					
+				</span>
+			<%end%>
+
+		</li>
+	<% end %>
+	</ul>
+	<%= will_paginate @to_do_items %><br>
+
+	<button><%= link_to "Edit Todo List", edit_to_do_list_path(@to_do_list) %> </button>
+
+	<button>
+	<%= link_to "Delete Todo List", to_do_list_path(@to_do_list), method: :delete, data: { confirm: 'Are you sure you want to delete this list?' } %>  
+	</button>
+
+	<button><%= link_to "Back to Todo List", root_path %></button>
+
+
+
+
+</div>
+

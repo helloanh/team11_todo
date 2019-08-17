@@ -1,0 +1,30 @@
+
+<main role="main" class="container">
+  <h1>Todo Lists</h1>
+
+  <button type="button" class="btn btn-primary"><%= link_to "Create New Todo list", new_to_do_list_path %></button>
+  
+
+
+  <div class="starter-template">
+    <div class="row">
+    	<% @to_do_lists.each do |ls| %>
+    	    <div class="card card-todo-list col-xs-6" style="">
+    		  <div class="card-body">
+    		    <h5 class="card-title"><%= ls.list_name %></h5>
+    		     <p class="card-text"> 
+                <span style="background-color: <%= ls.list_color %>; padding: 0.5em 1em; margin-right: 1rem; color: #FFFFF2; "> <%= ls.list_due_date %> </span>
+                <small>
+                  <%= link_to 'Show', to_do_list_path(ls) %> 
+                </small> 
+              </p>
+    		    
+    		  </div>
+    		</div>
+    	<% end %>
+    </div>
+    <%= will_paginate @to_do_lists %>
+  </div>
+</main><!-- /.container -->
+
+
